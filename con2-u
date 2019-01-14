@@ -1,0 +1,6 @@
+docker run --runtime=nvidia -ti --rm -e DISPLAY \
+ -v "/tmp/.X11-unix:/tmp/.X11-unix:rw" \
+ --privileged -v /home/ccma:/home/dllab/ccma \
+ --name nchcai -p 8888:8888 \
+ yumingchang/dllab:latest bash 
+# docker run -i -t --privileged nchcai/train:nctu-v1 jupyter notebook
